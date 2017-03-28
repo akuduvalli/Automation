@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="50" started-at="2017-02-07T22:18:32Z" finished-at="2017-02-07T22:18:32Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="50" started-at="2017-02-07T22:18:32Z" finished-at="2017-02-07T22:18:32Z">
+      <class name="TestNGExample">
+        <test-method status="PASS" signature="preTest()[pri:0, instance:TestNGExample@7c0e2abd]" name="preTest" is-config="true" duration-ms="5" started-at="2017-02-07T17:18:32Z" finished-at="2017-02-07T17:18:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preTest -->
+        <test-method status="PASS" signature="testAnotherPrintMessage()[pri:0, instance:TestNGExample@7c0e2abd]" name="testAnotherPrintMessage" duration-ms="8" started-at="2017-02-07T17:18:32Z" finished-at="2017-02-07T17:18:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnotherPrintMessage -->
+        <test-method status="PASS" signature="postTest()[pri:0, instance:TestNGExample@7c0e2abd]" name="postTest" is-config="true" duration-ms="0" started-at="2017-02-07T17:18:32Z" finished-at="2017-02-07T17:18:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTest -->
+        <test-method status="FAIL" signature="testPrintMessage()[pri:1, instance:TestNGExample@7c0e2abd]" name="testPrintMessage" duration-ms="3" started-at="2017-02-07T17:18:32Z" finished-at="2017-02-07T17:18:32Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at TestNGExample.testPrintMessage(TestNGExample.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPrintMessage -->
+        <test-method status="PASS" signature="preTest()[pri:0, instance:TestNGExample@7c0e2abd]" name="preTest" is-config="true" duration-ms="0" started-at="2017-02-07T17:18:32Z" finished-at="2017-02-07T17:18:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preTest -->
+        <test-method status="PASS" signature="postTest()[pri:0, instance:TestNGExample@7c0e2abd]" name="postTest" is-config="true" duration-ms="1" started-at="2017-02-07T17:18:32Z" finished-at="2017-02-07T17:18:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTest -->
+      </class> <!-- TestNGExample -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

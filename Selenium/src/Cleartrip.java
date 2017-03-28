@@ -1,0 +1,72 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Cleartrip {
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:/Softwares/chromedriver_win32/chromedriver.exe");
+		ChromeDriver dr = new ChromeDriver();
+		dr.get("http://www.cleartrip.com/");
+		Thread.sleep(3000);
+		dr.findElementById("RoundTrip").click();
+		Thread.sleep(1500);
+		dr.findElementById("FromTag").sendKeys("Bangalore, IN - Kempegowda International Airport (BLR)");
+		dr.findElementById("ToTag").sendKeys("Mumbai, IN - Chatrapati Shivaji Airport (BOM)");
+		dr.findElementByXPath("//*[@id='ORtrip']/section[2]/div[1]/dl/dd/div/a/i").click();
+		dr.findElementByXPath("//*[@id='ui-datepicker-div']/div[2]/table/tbody/tr[2]/td[3]/a").click();
+		dr.findElementByXPath("//dl[@id='ReturnDateContainer']/dd/div/a/i").click();
+		dr.findElementByXPath("//*[@id='ui-datepicker-div']/div[2]/table/tbody/tr[3]/td[4]/a").click();
+		Select web = new Select(dr.findElementByXPath("//*[@id='Adults']"));
+		web.selectByVisibleText("6");
+		dr.findElementById("SearchBtn").click();
+		WebElement myDynamicElement = (new WebDriverWait(dr, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='flightForm']/section[2]/div[4]/div[2]/nav/ul/li[3]/div/label/table/tbody/tr[1]/th[1]/input")));
+		myDynamicElement.click();
+		int ok_size=dr.findElements(By.xpath("//*[@id='flightForm']/section[2]/div[3]/div[3]/button")).size();
+		dr.findElements(By.xpath("//*[@id='flightForm']/section[2]/div[3]/div[3]/button")).get(ok_size-1).click();
+		dr.findElementById("itineraryBtn").click();
+		dr.findElementByXPath("//*[@id='username']").sendKeys("amogh.kuduvalli@gmail.com");
+		dr.findElementById("LoginContinueBtn_1").click();
+		Thread.sleep(3000);
+		Select web1 = new Select(dr.findElementById("AdultTitle1"));
+		web1.selectByVisibleText("Mr");
+		Select web2 = new Select(dr.findElementById("AdultTitle2"));
+		web2.selectByVisibleText("Mr");
+		Select web3 = new Select(dr.findElementById("AdultTitle3"));
+		web3.selectByVisibleText("Mr");
+		Select web4 = new Select(dr.findElementById("AdultTitle4"));
+		web4.selectByVisibleText("Mr");
+		Select web5 = new Select(dr.findElementById("AdultTitle5"));
+		web5.selectByVisibleText("Mr");
+		Select web6 = new Select(dr.findElementById("AdultTitle6"));
+		web6.selectByVisibleText("Mr");
+		dr.findElementById("AdultFname1").sendKeys("Amogh");
+		dr.findElementById("AdultFname2").sendKeys("Amgh");
+		dr.findElementById("AdultFname3").sendKeys("Amoh");
+		dr.findElementById("AdultFname4").sendKeys("mogh");
+		dr.findElementById("AdultFname5").sendKeys("Amh");
+		dr.findElementById("AdultFname6").sendKeys("Ah");
+		dr.findElementById("AdultLname1").sendKeys("Kuduvalli");
+		dr.findElementById("AdultLname2").sendKeys("Kuduvalli");
+		dr.findElementById("AdultLname3").sendKeys("Kuduvalli");
+		dr.findElementById("AdultLname4").sendKeys("Kuduvalli");
+		dr.findElementById("AdultLname5").sendKeys("Kuduvalli");
+		dr.findElementById("AdultLname6").sendKeys("Kuduvalli");
+		dr.findElementById("mobileNumber").sendKeys("9845621435");
+		dr.findElementById("travellerBtn").click();
+		Thread.sleep(15000);
+		dr.findElementByXPath("//*[@id='DCTab']/a").click();
+		dr.findElementById("debitCardNumberDisp").sendKeys("1234234534564567");
+		new Select(dr.findElementById("DcExpirationMonth")).selectByVisibleText("03");
+		new Select(dr.findElementById("DcExpirationYear")).selectByVisibleText("2031");
+		//int ok_siz=dr.findElements(By.xpath("//*[@id='BillName']")).size();
+		dr.findElements(By.xpath("//*[@id='BillName']")).get(1).sendKeys("AMOGH KUDUVALLI");
+		//dr.findElementByXPath("//*[@id='BillName']").sendKeys("AMOGH KUDUVALLI");
+		dr.findElementById("cvvCodeDc").sendKeys("987");
+		dr.findElementById("paymentSubmit").click();
+	}
+}
