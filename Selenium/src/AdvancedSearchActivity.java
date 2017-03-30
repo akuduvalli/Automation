@@ -28,7 +28,8 @@ public class AdvancedSearchActivity {
         dr.findElementById("ddlActivityCountry_chosen").click();
         dr.findElementByXPath("//*[@id='ddlActivityCountry_chosen']/div/ul/li[234]").click();
         dr.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        dr.findElementById("cntMain_ddlState_chosen").click();
+        WebElement countrySelected = dr.findElementById("cntMain_ddlState_chosen");
+        countrySelected.click();
         dr.findElementByXPath("//*[@id='cntMain_ddlState_chosen']/div/ul/li[40]").click();
         dr.findElementById("cntMain_txtExternalActivityID").sendKeys("11223");
         dr.findElementById("txtFrom_Activity_Date").sendKeys("27 MAR 2017");
